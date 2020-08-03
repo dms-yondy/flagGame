@@ -22,9 +22,11 @@ class GameScreen extends React.Component {
     }
 
     createNewQuestion() {
+        if(this.state.data === undefined) console.log('data is the problem');
         const arrLength = 4;
         const randomNumbers = this.generateRandomNumbers(arrLength, 250);
-        const nextFlag = randomNumbers[Math.floor(Math.random() * arrLength)];
+        const number = Math.floor(Math.random() * arrLength)
+        const nextFlag = randomNumbers[number];
         const nextAnswers = [];
         for(let i = 0; i < randomNumbers.length; i++) {
             nextAnswers.push(this.state.data[randomNumbers[i]].name);
@@ -42,12 +44,11 @@ class GameScreen extends React.Component {
 
         })
         this.createNewQuestion();
-        console.log(this.state.correctGuesses)
     }
     generateRandomNumbers(n, max) {
         let arr = [];
-        for(let i = 0; i < n; i++) {
-            let next = Math.floor(Math.random() * max) + 1;
+        while(arr.length < n) {
+            let next = Math.floor(Math.random() * max);
             if(arr.indexOf(next) === -1) arr.push(next);
         }
         return arr;
