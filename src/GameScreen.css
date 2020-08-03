@@ -1,0 +1,15 @@
+.game {
+    margin: auto 0;
+    text-align: center;
+}
+.game__title, .game__body__title {
+    font-family: var(--font-primary);
+}
+
+.game__body__title {
+    margin-bottom: 2em;
+}
+
+.game__body__points {
+    margin-top: 3em;
+}

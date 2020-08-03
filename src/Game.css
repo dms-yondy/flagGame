@@ -1,0 +1,43 @@
+.game {
+    --border-size: 2px;
+}
+
+.game__flag__image {
+    width: 20em;
+}
+
+.game__buttons {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.game__buttons__button {
+    background-color: var(--clr-light);
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.game__buttons__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border: var(--border-size) solid var(--clr-accent);
+    transition: all 200ms ease-in-out;
+}
+.game__buttons__button:hover::before,
+.game__buttons__button:focus::before{
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
