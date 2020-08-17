@@ -1,0 +1,17 @@
+.Footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: solid 2px var(--clr-accent);
+}
+
+.Footer__logo {
+    display: flex;
+}
+
+.Footer__logo__img {
+    margin-top: 11px;
+    margin-left: 2px;
+    width: 60px;
+    height: 30px;
+}

@@ -1,10 +1,13 @@
 .game {
     --border-size: 2px;
+    font-family: var(--font-secondary);
 }
 
 .game__flag__image {
-    width: 20em;
-    height: 10em;
+    box-shadow: 8px 15px 10px var(--clr-dark);
+    object-fit: contain;
+    width: auto;
+    height: 13rem;
 }
 
 .game__buttons {
@@ -15,7 +18,9 @@
 }
 
 .game__buttons__button {
+    font-size: 1.3em;
     background-color: var(--clr-light);
+    color: var(--clr-dark);
     position: relative;
     padding: 1em 1.5em;
     border: none;

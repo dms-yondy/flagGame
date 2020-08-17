@@ -1,0 +1,35 @@
+.home {
+    display: grid;
+    grid-template-rows: 10em 10em 10em;
+    background: linear-gradient(10deg, var(--clr-accent), 80%, var(--clr-light));
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+    color: var(--clr-light);
+}
+
+.home__content {
+    margin-left: 15em;
+    margin-top: 7em;
+}
+
+.home__main-title {
+    font-size: 4em;
+}
+
+.home__tag-line {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.home__button {
+    border: none;
+    padding: 1em 5em;
+    border-radius: 1.5em;
+    box-shadow: 4px 6px 4px var(--clr-dark);
+    cursor: pointer;
+    color: var(--clr-light);
+    font-size: 1em;
+    font-weight: bolder;
+    background-color: var(--clr-accent);
+}

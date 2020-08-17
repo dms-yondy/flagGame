@@ -1,0 +1,23 @@
+.Header {
+    display: flex;
+    border-bottom: solid 0.2em var(--clr-accent);
+}
+
+.Header__logo__img {
+    margin-right: auto;
+    width: 200px;
+    height: 50px;
+    margin-left: 0.5em;
+}
+
+.Header__nav {
+    margin-left: auto;
+}
+
+.Header__nav__list {
+    margin-right: 1em;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    grid-gap: 2em;
+}

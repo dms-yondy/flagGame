@@ -1,5 +1,8 @@
 import React from 'react'
+
 import Game from './Game'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 import './GameScreen.css'
 
@@ -67,17 +70,21 @@ class GameScreen extends React.Component {
 
     render() {
         return (
-            <div className="game">
-                <h1 className="game__title">Guess The Flag</h1>
-                <div className="game__body">
-                    <h2 className="game__body__title">Which country has this flag?</h2>
-                    {this.state.loading ? <p>loading..</p> : <Game handleClick={this.handleClick}flag={this.state.currFlag.flag} answers={this.state.answers}/>}
-                    <div className="game__body__points">
-                        <p>Correct Answers: {this.state.correctGuesses}</p>
-                        <p>Wrong Answers: {this.state.totalGuesses - this.state.correctGuesses}</p>
-                        <p>Total Number of Answers: {this.state.totalGuesses}</p>
+            <div className="game__screen">
+                <Header />
+                <div className="page-content">
+                    <h1 className="game__title">Guess The Flag</h1>
+                    <div className="game__body">
+                        <h2 className="game__body__title">Which country has this flag?</h2>
+                        {this.state.loading ? <p>loading..</p> : <Game handleClick={this.handleClick}flag={this.state.currFlag.flag} answers={this.state.answers}/>}
+                        <div className="game__body__points">
+                            <p>Correct Answers: {this.state.correctGuesses}</p>
+                            <p>Wrong Answers: {this.state.totalGuesses - this.state.correctGuesses}</p>
+                            <p>Total Number of Answers: {this.state.totalGuesses}</p>
+                        </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

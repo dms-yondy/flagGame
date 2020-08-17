@@ -1,15 +1,29 @@
-.game {
+.game__screen {
+    position: relative;
+    min-height: 100vh;
     margin: auto 0;
     text-align: center;
-}
-.game__title, .game__body__title {
-    font-family: var(--font-primary);
+    display: grid;
+    grid-template-rows: 3.2em auto 2em;
+    font-family: var(--font-secondary);
 }
 
+.page-content {
+    padding-top: 2emm;
+    padding-bottom: 2em;
+}
+
+.game__title {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
 .game__body__title {
     margin-bottom: 2em;
 }
 
 .game__body__points {
-    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: var(--font-size-text);
+    margin-top: 2em;;
 }
