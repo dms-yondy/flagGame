@@ -1,6 +1,8 @@
 .home {
     display: grid;
     grid-template-rows: 10em 10em 10em;
+    justify-content: center;
+    text-align: center;
     background: linear-gradient(10deg, var(--clr-accent), 80%, var(--clr-light));
     min-height: 100vh;
     position: absolute;
@@ -9,7 +11,6 @@
 }
 
 .home__content {
-    margin-left: 15em;
     margin-top: 7em;
 }
 
@@ -32,4 +33,8 @@
     font-size: 1em;
     font-weight: bolder;
     background-color: var(--clr-accent);
+}
+
+.home__button:hover {
+    box-shadow: 4px 4px 4px 4px var(--clr-light);
 }
